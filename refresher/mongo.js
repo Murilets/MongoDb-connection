@@ -1,7 +1,6 @@
 const MongoClient = require('mongodb').MongoClient;
-
-const url = 
-'mongodb+srv://test:test@clustertest.fmbdilg.mongodb.net/products_test?appName=ClusterTest'
+require('dotenv').config();
+const url = process.env.MONGO_URL;
 
 const createProduct = async (req, res, next) => {
        const newProduct = {
