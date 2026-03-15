@@ -1,7 +1,7 @@
 const MongoClient = require('mongodb').MongoClient;
 require('dotenv').config();
-const url = process.env.MONGO_URL;
 
+const url = process.env.MONGO_URL;
 const createProduct = async (req, res, next) => {
        const newProduct = {
            name: req.body.name,
